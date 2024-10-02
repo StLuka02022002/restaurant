@@ -1,7 +1,5 @@
 package com.example.restaurant.entity.embeddable;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
@@ -12,6 +10,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import java.time.LocalDate;
 
 @Data

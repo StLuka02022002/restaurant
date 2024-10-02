@@ -5,9 +5,10 @@ import com.example.restaurant.entity.Visitor;
 import com.example.restaurant.service.BookingService;
 import com.example.restaurant.service.TableService;
 import com.example.restaurant.service.VisitorService;
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityNotFoundException;
 
 @Service
 @RequiredArgsConstructor

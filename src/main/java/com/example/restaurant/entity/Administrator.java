@@ -2,9 +2,9 @@ package com.example.restaurant.entity;
 
 import com.example.restaurant.entity.embeddable.FullName;
 import com.example.restaurant.entity.embeddable.Passport;
-import jakarta.persistence.*;
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -27,7 +27,7 @@ public class Administrator extends AbstractEntity{
     @Embedded
     private Passport passport;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
 

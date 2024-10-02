@@ -2,12 +2,9 @@ package com.example.restaurant.mapper;
 
 import com.example.restaurant.entity.Administrator;
 import com.example.restaurant.entity.Restaurant;
-import com.example.restaurant.entity.RestaurantTable;
 import com.example.restaurant.service.RestaurantService;
 import com.example.restaurant.web.request.AdministratorRequest;
-import com.example.restaurant.web.request.RestaurantTableRequest;
 import com.example.restaurant.web.response.AdministratorResponse;
-import com.example.restaurant.web.response.RestaurantTableResponse;
 import org.mapstruct.*;
 
 @Mapper(componentModel = "spring", uses = {RestaurantService.class}, unmappedTargetPolicy = ReportingPolicy.IGNORE)

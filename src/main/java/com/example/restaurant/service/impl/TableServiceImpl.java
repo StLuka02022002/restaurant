@@ -5,9 +5,9 @@ import com.example.restaurant.repository.TableRepository;
 import com.example.restaurant.service.AbstractService;
 import com.example.restaurant.service.RestaurantService;
 import com.example.restaurant.service.TableService;
-import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 

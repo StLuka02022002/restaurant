@@ -2,8 +2,9 @@ package com.example.restaurant.entity;
 
 import com.example.restaurant.entity.enumeration.CuisineType;
 import com.example.restaurant.entity.enumeration.DishType;
-import jakarta.persistence.*;
 import lombok.*;
+
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -30,7 +31,7 @@ public class Menu extends AbstractEntity {
     @Column(name = "cuisine_type")
     private CuisineType cuisineType = CuisineType.OTHER;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
 }

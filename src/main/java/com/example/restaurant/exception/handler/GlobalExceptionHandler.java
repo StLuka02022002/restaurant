@@ -2,7 +2,6 @@ package com.example.restaurant.exception.handler;
 
 import com.example.restaurant.exception.InvalidPhoneNumberException;
 import com.example.restaurant.message.Message;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.stream.Collectors;
 
 @ControllerAdvice
@@ -48,6 +48,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Message> handleGeneralException(Exception e, WebRequest request) {
+        e.printStackTrace();
         Message error = new Message("Произошла ошибка: " + e.getMessage());
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }

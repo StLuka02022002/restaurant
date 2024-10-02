@@ -5,7 +5,6 @@ import com.example.restaurant.entity.embeddable.Passport;
 import com.example.restaurant.entity.enumeration.CuisineType;
 import com.example.restaurant.exception.handler.ValidEnum;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
-import jakarta.persistence.Embedded;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

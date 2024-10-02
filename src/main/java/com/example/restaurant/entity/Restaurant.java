@@ -2,9 +2,9 @@ package com.example.restaurant.entity;
 
 import com.example.restaurant.entity.embeddable.Address;
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
-import jakarta.persistence.*;
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 

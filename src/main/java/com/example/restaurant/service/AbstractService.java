@@ -1,14 +1,14 @@
 package com.example.restaurant.service;
 
-import jakarta.persistence.EntityNotFoundException;
-import lombok.RequiredArgsConstructor;
 import com.example.restaurant.entity.AbstractEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.restaurant.repository.BaseRepository;
+import lombok.RequiredArgsConstructor;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @RequiredArgsConstructor
-public abstract class AbstractService<T extends AbstractEntity, R extends JpaRepository<T, Long>> implements Service<T> {
+public abstract class AbstractService<T extends AbstractEntity, R extends BaseRepository<T>> implements Service<T> {
 
     protected final R repository;
 

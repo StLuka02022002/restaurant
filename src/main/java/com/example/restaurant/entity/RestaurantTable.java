@@ -1,7 +1,8 @@
 package com.example.restaurant.entity;
 
-import jakarta.persistence.*;
 import lombok.*;
+
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -27,11 +28,11 @@ public class RestaurantTable extends AbstractEntity {
     @Column(name = "reservation")
     private Boolean reservation = Boolean.FALSE;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "visitor_id")
     private Visitor visitor;
 
